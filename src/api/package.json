@@ -4,7 +4,7 @@
   "description": "",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "ts-mocha --timeout 80000 test/**/*.ts"
+    "test": "ts-mocha --timeout 120000 test/**/*.ts"
   },
   "keywords": [],
   "author": "",
