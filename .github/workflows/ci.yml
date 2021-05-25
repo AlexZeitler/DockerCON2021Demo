@@ -8,8 +8,6 @@ on:
     branches:
       - main
 jobs:
-  lint:
-    runs-on: ubuntu-18.04
   build:
     runs-on: ubuntu-18.04
     name: Test
@@ -17,6 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "12"
-      - run: yarn
-      - run: yarn test
+          node-version: "14"
+      - run: docker ps
+      - run: cd src/api/test && docker-compose ps
+      - run: cd src/api && yarn && yarn test
