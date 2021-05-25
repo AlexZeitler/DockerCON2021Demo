@@ -32,7 +32,7 @@ describe('api', (): void => {
         const result = await response.json()
         result.text.should.equal('world')
         return done()
-      }, 2000)
+      }, 3000)
     })
   })
 
@@ -49,7 +49,7 @@ describe('api', (): void => {
         const result = (await response2.json()) as { description: string }[]
         result[0].description.should.equal('My first todo')
         return done()
-      }, 2000)
+      }, 3000)
     })
   })
 
