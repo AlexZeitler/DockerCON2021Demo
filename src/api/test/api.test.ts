@@ -6,6 +6,7 @@ import 'should'
 const cwd = path.join(__dirname)
 const upOptions: compose.IDockerComposeOptions = {
   cwd,
+  log: true,
   commandOptions: ['--build']
 }
 
