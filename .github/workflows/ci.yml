@@ -16,4 +16,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "14"
+      - run: docker ps
       - run: cd src/api && yarn && yarn test
