@@ -17,4 +17,5 @@ jobs:
         with:
           node-version: "14"
       - run: docker ps
+      - run: cd src/api/test && docker-compose ps
       - run: cd src/api && yarn && yarn test
